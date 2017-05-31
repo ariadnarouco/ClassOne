@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise one</title>
+</head>
+<body>
+	<p>
+		Ask for 
+	</p>
+
+	<script type="text/javascript">
+		var nombreCompleto = prompt("What's your name?");
+		if(nombreCompleto !== ""){
+			result = nombreCompleto;
+		}else{
+			result = "You have entered an empty value";
+		}
+
+		alert(result);
+
+		var result ;
+		var dateOfBirth = prompt("What's the year you were born ?");
+		if(!isBlank(dateOfBirth)){
+			dateOfBirth = parseInt(dateOfBirth);
+			if(!isBlank(dateOfBirth)){
+				var yearsOld = 2017 - dateOfBirth;
+				var daysLived = yearsOld * 365;
+
+				result = "Did you know that you are approximately " + yearsOld + " And that you've been alive for " + daysLived ;
+			}
+		}else{
+			result ="You have entered an empty value";
+		}
+
+		alert(result);
+
+		function isBlank(parameter){
+			if(parameter === null || parameter === undefined || parameter === ""){
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		console.log("You've made it this far. Congrats!");
+
+	</script>
+</body>
+</html>

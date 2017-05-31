@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Let's do some math, shall we?</title>
+	</head>
+	<body>
+
+		<p>
+			Ask for two values in a prompt and, with an alert, show the result of different operations.
+		</p>
+		<script type="text/javascript">
+			var firstNumber = prompt("Give the first number please:");
+			var secondNumber = prompt("Give the second number please:");
+
+			firstNumber = parseInt(firstNumber);
+			secondNumber = parseInt(secondNumber);
+			
+
+			if(!isBlank(firstNumber) && !isBlank(secondNumber)){
+				var sum = firstNumber + secondNumber;
+				var resultAlter=[];
+				var result = "This is the sum result: " +sum + " \n";
+				resultAlter[0] = result;
+
+				var minus= firstNumber - secondNumber;	
+				result = result + "This is the minus result: " +minus + " \n";
+				resultAlter[1] = "This is the minus result: " +minus + " \n";
+
+				var multiply= firstNumber * secondNumber;	
+				result = result + "This is the multiplication result: " + multiply + " \n";
+				resultAlter[2]="This is the multiplication result: " + multiply + " \n";
+				
+				var divide= firstNumber / secondNumber;
+				result = result + "This is the division result: " + divide + " \n";
+				resultAlter[3] ="This is the division result: " + divide + " \n";
+				
+				alert(result);
+
+				alert(resultAlter);
+			}else{
+				alert("Review the values you entered, either they are null, undefined, blank or you simply entered whatever you wanted to enter, you little bugger ;) ");
+			}
+
+
+
+			function isBlank(parameter){
+				if(parameter === null || parameter === undefined || parameter === "" || isNaN(parameter)){
+					return true;
+				}else{
+					return false;
+				}
+			}
+
+		</script>
+
+	</body>
+</html>

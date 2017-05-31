@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aprendiendo js</title>
+	</head>
+	<body>
+
+	<script type="text/javascript">
+		var lista = [	
+			"Hola",
+			"Mundo"
+		];
+
+		console.log(lista);
+
+		iterateList();
+
+		console.log("bla");
+
+		function iterateList(){
+			for(var i = 0; i < 2; i++){
+				console.log(lista[i].concat("Hola viejo"));
+			}
+		}
+
+		var numero= 1;
+		var string= "1";
+
+		//Comparo valor
+		console.log(numero == string);
+
+		//Compara valor y tipo 
+		console.log(numero === string);
+
+		alert(numero === string);
+		var result = prompt("Give me your money");
+		var texto="You are a such a bad person";
+		if(result !== null){
+			
+		}else{
+			result = undefined;
+		}
+		alert(result);
+	</script>
+	</body>
+</html>
